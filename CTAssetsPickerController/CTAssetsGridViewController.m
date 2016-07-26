@@ -147,6 +147,7 @@ NSString * const CTAssetsGridViewFooterIdentifier = @"CTAssetsGridViewFooterIden
 
 - (void)dealloc
 {
+    [self.imageManager stopCachingImagesForAllAssets];
     [self unregisterChangeObserver];
     [self removeNotificationObserver];
 }
