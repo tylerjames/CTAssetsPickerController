@@ -44,6 +44,7 @@
 
 @property (nonatomic, weak, nullable) id<CTAssetsGridViewControllerDelegate> delegate;
 @property (nonatomic, strong, nonnull) PHAssetCollection *assetCollection;
+@property (nonatomic) BOOL allowsPreview;
 
 @end
 

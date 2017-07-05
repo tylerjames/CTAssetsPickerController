@@ -69,6 +69,7 @@
     {
         _imageManager = [PHCachingImageManager new];
         [self addNotificationObserver];
+        _allowsPreview = YES;
     }
     
     return self;

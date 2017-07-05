@@ -93,6 +93,7 @@ NSString * const CTAssetsGridViewFooterIdentifier = @"CTAssetsGridViewFooterIden
                        withReuseIdentifier:CTAssetsGridViewFooterIdentifier];
         
         [self addNotificationObserver];
+        _allowsPreview = YES;
     }
     
     return self;
@@ -462,10 +463,12 @@ NSString * const CTAssetsGridViewFooterIdentifier = @"CTAssetsGridViewFooterIden
 
 - (void)addGestureRecognizer
 {
-    UILongPressGestureRecognizer *longPress =
-    [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(pushPageViewController:)];
-    
-    [self.collectionView addGestureRecognizer:longPress];
+    if (self.allowsPreview) {
+        UILongPressGestureRecognizer *longPress =
+        [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(pushPageViewController:)];
+
+        [self.collectionView addGestureRecognizer:longPress];
+    }
 }
 
 

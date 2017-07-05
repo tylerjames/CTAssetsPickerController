@@ -28,6 +28,8 @@
 
 @interface CTAssetCollectionViewController : UITableViewController
 
+@property (nonatomic) BOOL allowsPreview;
 - (void)reloadUserInterface;
+
 
 @end

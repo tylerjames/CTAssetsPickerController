@@ -95,6 +95,7 @@
 
             // init picker
             CTAssetsPickerController *picker = [[CTAssetsPickerController alloc] init];
+            picker.allowsPreview = NO;
             
             // set delegate
             picker.delegate = self;

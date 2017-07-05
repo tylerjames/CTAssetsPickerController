@@ -136,6 +136,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) BOOL showsSelectionIndex;
 
 /**
+ *  Determines whether long press to show full screen preview of image is allowed.
+ *  Defualts to 'YES'
+ */
+@property (nonatomic) BOOL allowsPreview;
+
+/**
  *  The split view controller of the picker hierarchy. (read-only)
  *
  *  This property contains the child split view controller of the picker.

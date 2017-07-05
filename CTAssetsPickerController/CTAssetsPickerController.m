@@ -82,6 +82,7 @@ NSString * const CTAssetsPickerDidDeselectAssetNotification = @"CTAssetsPickerDi
         [self initAssetCollectionSubtypes];
         [self initThumbnailRequestOptions];
         self.preferredContentSize           = CTAssetsPickerPopoverContentSize;
+        _allowsPreview = YES;
     }
     
     return self;
@@ -252,6 +253,8 @@ NSString * const CTAssetsPickerDidDeselectAssetNotification = @"CTAssetsPickerDi
     CTAssetsNavigationController *master = [[CTAssetsNavigationController alloc] initWithRootViewController:vc];
     UINavigationController *detail = [self emptyNavigationController];
     UISplitViewController *svc  = [UISplitViewController new];
+
+    vc.allowsPreview = self.allowsPreview;
     
     svc.delegate = self;
     svc.viewControllers = @[master, detail];
