@@ -81,7 +81,7 @@ NSString * const CTAssetsGridViewFooterIdentifier = @"CTAssetsGridViewFooterIden
     {
         _imageManager = [PHCachingImageManager new];
         
-        self.extendedLayoutIncludesOpaqueBars = YES;
+        self.edgesForExtendedLayout = UIRectEdgeNone;
         
         self.collectionView.allowsMultipleSelection = YES;
         
